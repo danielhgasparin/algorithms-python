@@ -1,15 +1,22 @@
 """Main module to execute algorithms.
 
 Usage:
-    python main.py <function-name> [<argument>...]
+    python main.py <module> <function> [<argument>...]
 """
 
 import sys
+import importlib
+import util.args as argsutil
 
-function_name = sys.argv[1]
-args = sys.argv[2:]
+package_name = "algorithms"
+module_name = sys.argv[1]
+function_name = sys.argv[2]
+args_str = sys.argv[3:]
 
-if function_name == "fib_up_to":
-    from algorithms.fibonacci import fib_up_to
-    result = fib_up_to(int(args[0]))
-    print(result)
+module = importlib.import_module(package_name + "." + module_name)
+function = getattr(module, function_name)
+args = argsutil.convert(args_str)
+
+result = function(*args)
+
+print(result)
