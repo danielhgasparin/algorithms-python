@@ -93,10 +93,8 @@ def fib_recursive_mathy(n):
     Returns:
         The Number in Fibonacci sequence at the specified position.
     """
-    if n <= 0:
-        return None
-    elif n <= 2:
-        return 1
+    if n < 2:
+        return n
     else:
         return fib_recursive_mathy(n - 1) + fib_recursive_mathy(n - 2)
 
