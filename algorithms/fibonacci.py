@@ -42,7 +42,7 @@ def fib_generator():
         a, b = b, a + b
 
 
-def fib_generator_test(n):
+def run_fib_generator(n):
     """Return Fibonacci sequence with length "n" using a generator.
     
     Args:
@@ -99,7 +99,7 @@ def fib_recursive_mathy(n):
         return fib_recursive_mathy(n - 1) + fib_recursive_mathy(n - 2)
 
 
-def fib_recursive_mathy_test(n):
+def run_fib_recursive_mathy(n):
     """Return Fibonacci sequence with length "n" using a mathematical recursive function.
     
     Args:
