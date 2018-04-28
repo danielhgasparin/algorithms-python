@@ -11,11 +11,14 @@ Usage:
 
 import unittest
 import tests.test_fibonacci
+import tests.test_reverse_string
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
-runner = unittest.TextTestRunner()
+runner = unittest.TextTestRunner(verbosity=2)
+
 
 suite.addTest(loader.loadTestsFromModule(tests.test_fibonacci))
+suite.addTest(loader.loadTestsFromModule(tests.test_reverse_string))
 
 runner.run(suite)
