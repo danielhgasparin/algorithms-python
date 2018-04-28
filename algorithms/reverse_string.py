@@ -12,7 +12,7 @@ def reverse_functional(value):
 
 
 def reverse_builtin(value):
-    """Reverse string using the built-in function "reversed"."""
+    """Reverse string using the "reversed" function."""
     return "".join(reversed(value))
 
 
