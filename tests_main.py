@@ -14,6 +14,7 @@ import tests.test_fibonacci
 import tests.test_reverse_string
 import tests.test_palindrome
 import tests.test_reverse_integer
+import tests.test_max_occurrence
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -23,5 +24,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_fibonacci))
 suite.addTest(loader.loadTestsFromModule(tests.test_reverse_string))
 suite.addTest(loader.loadTestsFromModule(tests.test_palindrome))
 suite.addTest(loader.loadTestsFromModule(tests.test_reverse_integer))
+suite.addTest(loader.loadTestsFromModule(tests.test_max_occurrence))
 
 runner.run(suite)
