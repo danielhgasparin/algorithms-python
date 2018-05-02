@@ -20,7 +20,16 @@ def fizzbuzz(n):
     return result
 
 
-def fizzbuzz_generator():
+def run_fizzbuzz_generator(n):
+    """Return Fizzbuzz sequence up to "n" using using "fizzbuzz_generator"."""
+    result = []
+    fizzbuzz_gen = _fizzbuzz_generator()
+    for _ in range(n):
+        result.append(next(fizzbuzz_gen))
+    return result
+
+
+def _fizzbuzz_generator():
     """Generator of Fizzbuzz sequence."""
     i = 1
     while True:
@@ -33,12 +42,3 @@ def fizzbuzz_generator():
         else:
             yield str(i)
         i += 1
-
-
-def run_fizzbuzz_generator(n):
-    """Return Fizzbuzz sequence up to "n" using using "fizzbuzz_generator"."""
-    result = []
-    fizzbuzz_gen = fizzbuzz_generator()
-    for _ in range(n):
-        result.append(next(fizzbuzz_gen))
-    return result

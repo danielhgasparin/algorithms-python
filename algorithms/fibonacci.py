@@ -34,14 +34,6 @@ def fib_up_to(n):
     return result
 
 
-def fib_generator():
-    """Generator of Fibonacci sequence."""
-    a, b = 0, 1
-    while True:
-        yield b
-        a, b = b, a + b
-
-
 def run_fib_generator(n):
     """Return Fibonacci sequence with length "n" using "fib_generator".
     
@@ -52,10 +44,18 @@ def run_fib_generator(n):
         A list containing the Fibonacci sequence.
     """
     result = []
-    fib_gen = fib_generator()
+    fib_gen = _fib_generator()
     for _ in range(n):
         result.append(next(fib_gen))
     return result
+
+
+def _fib_generator():
+    """Generator of Fibonacci sequence."""
+    a, b = 0, 1
+    while True:
+        yield b
+        a, b = b, a + b
 
 
 def fib_recursive(n, acc = None):

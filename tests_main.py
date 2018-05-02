@@ -17,6 +17,7 @@ import tests.test_reverse_integer
 import tests.test_max_occurrence
 import tests.test_fizzbuzz
 import tests.test_array_chunk
+import tests.test_anagram
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -29,5 +30,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_reverse_integer))
 suite.addTest(loader.loadTestsFromModule(tests.test_max_occurrence))
 suite.addTest(loader.loadTestsFromModule(tests.test_fizzbuzz))
 suite.addTest(loader.loadTestsFromModule(tests.test_array_chunk))
+suite.addTest(loader.loadTestsFromModule(tests.test_anagram))
 
 runner.run(suite)
