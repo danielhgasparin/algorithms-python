@@ -16,6 +16,7 @@ import tests.test_palindrome
 import tests.test_reverse_integer
 import tests.test_max_occurrence
 import tests.test_fizzbuzz
+import tests.test_array_chunk
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -27,5 +28,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_palindrome))
 suite.addTest(loader.loadTestsFromModule(tests.test_reverse_integer))
 suite.addTest(loader.loadTestsFromModule(tests.test_max_occurrence))
 suite.addTest(loader.loadTestsFromModule(tests.test_fizzbuzz))
+suite.addTest(loader.loadTestsFromModule(tests.test_array_chunk))
 
 runner.run(suite)

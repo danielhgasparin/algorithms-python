@@ -7,6 +7,7 @@ def max_occurrence(value):
         occurrences[char] = occurrences.get(char, 0) + 1
     return max(occurrences.items(), key=lambda item: item[1])[0]
 
+
 def max_occurrence_loop(value):
     """Return the char that appears more times in a string using a loop to check the dictionary."""
     occurrences = dict()
