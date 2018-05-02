@@ -52,9 +52,9 @@ def run_fib_generator(n):
         A list containing the Fibonacci sequence.
     """
     result = []
-    fib_seq = fib_generator()
+    fib_gen = fib_generator()
     for _ in range(n):
-        result.append(next(fib_seq))
+        result.append(next(fib_gen))
     return result
 
 
