@@ -24,9 +24,9 @@ def steps_concat(n):
 def steps_loop(n):
     """Return a list of "n" progression steps, using loops."""
     result = []
-    for i in range(1, n + 1):
+    for i in range(n):
         line = ""
-        for j in range(1, n + 1):
+        for j in range(n):
             line += "#" if j <= i else " "
         result.append(line)
     return result
