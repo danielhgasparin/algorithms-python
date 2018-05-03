@@ -22,6 +22,7 @@ import tests.test_capitalization
 import tests.test_steps
 import tests.test_pyramid_steps
 import tests.test_vowels
+import tests.test_spiral_matrix
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -39,5 +40,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_capitalization))
 suite.addTest(loader.loadTestsFromModule(tests.test_steps))
 suite.addTest(loader.loadTestsFromModule(tests.test_pyramid_steps))
 suite.addTest(loader.loadTestsFromModule(tests.test_vowels))
+suite.addTest(loader.loadTestsFromModule(tests.test_spiral_matrix))
 
 runner.run(suite)
