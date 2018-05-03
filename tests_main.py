@@ -19,6 +19,7 @@ import tests.test_fizzbuzz
 import tests.test_array_chunk
 import tests.test_anagram
 import tests.test_capitalization
+import tests.test_steps
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -33,5 +34,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_fizzbuzz))
 suite.addTest(loader.loadTestsFromModule(tests.test_array_chunk))
 suite.addTest(loader.loadTestsFromModule(tests.test_anagram))
 suite.addTest(loader.loadTestsFromModule(tests.test_capitalization))
+suite.addTest(loader.loadTestsFromModule(tests.test_steps))
 
 runner.run(suite)

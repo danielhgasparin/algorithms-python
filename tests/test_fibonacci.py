@@ -24,6 +24,9 @@ class TestFibonacci(unittest.TestCase):
     def test_fib_recursive(self):
         self.assertListEqual(fib_recursive(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 
+    def test_fib_recursive_implicit_acc(self):
+        self.assertListEqual(fib_recursive_implicit_acc(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+
     def test_fib_recursive_mathy(self):
         self.assertEqual(fib_recursive_mathy(0), 0)
         self.assertEqual(fib_recursive_mathy(10), 55)

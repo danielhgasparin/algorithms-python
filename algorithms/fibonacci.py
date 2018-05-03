@@ -72,14 +72,41 @@ def fib_recursive(n, acc = None):
     """
     if acc is None:
         acc = []
+
     if n <= 0:
         return acc
+
+    if len(acc) < 2:
+        acc.append(1)
     else:
-        if len(acc) < 2:
-            acc.append(1)
-        else:
-            acc.append(acc[-1] + acc[-2])
-        return fib_recursive(n - 1, acc)
+        acc.append(acc[-1] + acc[-2])
+    return fib_recursive(n - 1, acc)
+
+
+def fib_recursive_implicit_acc(n, acc = []):
+    """Return Fibonacci sequence with length "n" using recursion.
+
+    In this function acc is default to an initial List instead of None. Since Python evaluates default arguments only once, 
+    the reference to the same list is kept across consecutive calls, resulting in no need to pass the list again.
+
+    It works, but in the logic gets a bit hidden behind a Python trick, and only works for mutable types,
+    so the more explicit form of the previous method is preferable.
+
+    Args:
+        n: The length of the sequence to return.
+        acc: Acumulator used for the recursive construction of the result list.
+
+    Returns:
+        A list containing the Fibonacci sequence.
+    """
+    if n <= 0:
+        return acc
+
+    if len(acc) < 2:
+        acc.append(1)
+    else:
+        acc.append(acc[-1] + acc[-2])
+    return fib_recursive_implicit_acc(n - 1)
 
 
 def fib_recursive_mathy(n):
@@ -95,8 +122,8 @@ def fib_recursive_mathy(n):
     """
     if n < 2:
         return n
-    else:
-        return fib_recursive_mathy(n - 1) + fib_recursive_mathy(n - 2)
+
+    return fib_recursive_mathy(n - 1) + fib_recursive_mathy(n - 2)
 
 
 def run_fib_recursive_mathy(n):
