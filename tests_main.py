@@ -23,6 +23,7 @@ import tests.test_steps
 import tests.test_pyramid_steps
 import tests.test_vowels
 import tests.test_spiral_matrix
+import tests.test_queue
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -41,5 +42,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_steps))
 suite.addTest(loader.loadTestsFromModule(tests.test_pyramid_steps))
 suite.addTest(loader.loadTestsFromModule(tests.test_vowels))
 suite.addTest(loader.loadTestsFromModule(tests.test_spiral_matrix))
+suite.addTest(loader.loadTestsFromModule(tests.test_queue))
 
 runner.run(suite)
