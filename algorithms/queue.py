@@ -17,4 +17,7 @@ class Queue:
 
     def peek(self):
         """Get the element at the start of the queue without removing it."""
-        return self._queue[0]
+        try:
+            return self._queue[0]
+        except IndexError:
+            return None

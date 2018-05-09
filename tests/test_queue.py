@@ -11,3 +11,6 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(queue.peek(), 2)
         self.assertEqual(queue.dequeue(), 2)
         self.assertEqual(queue.dequeue(), 3)
+        self.assertEqual(queue.peek(), None)
+        with self.assertRaises(IndexError):
+            queue.dequeue()
