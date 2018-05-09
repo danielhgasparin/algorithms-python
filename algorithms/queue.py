@@ -8,7 +8,7 @@ class Queue:
         self._queue = deque()
 
     def enqueue(self, element):
-        """Add element to end of the queue."""
+        """Add element to the end of the queue."""
         self._queue.append(element)
 
     def dequeue(self):
