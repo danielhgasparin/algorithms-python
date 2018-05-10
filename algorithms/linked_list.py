@@ -73,3 +73,38 @@ class LinkedList:
         else:
             tail.next = node
         
+    def get_at(self, index):
+        """Get the element at the specified index."""
+        count = 0
+        current = self.head
+        while current is not None:
+            if count == index:
+                return current
+            current = current.next
+            count += 1
+        return None
+
+    def remove_at(self, index):
+        """Remove the element at the specified index."""
+        if self.head is None:
+            return
+        
+        if index == 0:
+            self.head = self.head.next
+
+        previous = self.get_at(index - 1)
+        if previous is None or previous.next is None:
+            return
+
+        previous.next = previous.next.next
+
+    def insert_at(self, index, value):
+        """Insert a new value to the linked list at the specified index."""
+        if self.head is None or index == 0:
+            self.head = Node(value, self.head)
+            return
+
+        # Get the node before the specified index or, if it not exists, at the tail.
+        previous = self.get_at(index - 1) or self.get_tail()
+
+        previous.next = Node(value, previous.next)
