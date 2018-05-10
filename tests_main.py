@@ -27,6 +27,7 @@ import tests.test_queue
 import tests.test_weave
 import tests.test_stack
 import tests.test_queue_of_stacks
+import tests.test_linked_list
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -49,5 +50,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_queue))
 suite.addTest(loader.loadTestsFromModule(tests.test_weave))
 suite.addTest(loader.loadTestsFromModule(tests.test_stack))
 suite.addTest(loader.loadTestsFromModule(tests.test_queue_of_stacks))
+suite.addTest(loader.loadTestsFromModule(tests.test_linked_list))
 
 runner.run(suite)
