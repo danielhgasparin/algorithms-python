@@ -1,5 +1,5 @@
 import unittest
-from algorithms.queue import *
+from algorithms.queue import Queue
 
 class TestQueue(unittest.TestCase):
     def test_queue(self):

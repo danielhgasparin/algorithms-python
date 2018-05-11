@@ -1,5 +1,5 @@
 import unittest
-from algorithms.queue_of_stacks import *
+from algorithms.queue_of_stacks import QueueOfStacks
 
 class TestQueueOfStacks(unittest.TestCase):
     def test_queue_of_stacks(self):
