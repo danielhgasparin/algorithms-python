@@ -150,3 +150,12 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(linked.get_at(5).value, 6)
         linked.insert_at(0, 7)
         self.assertEqual(linked.get_at(0).value, 7)
+
+    def test_linked_list_iteration(self):
+        linked = LinkedList()
+        linked.insert(2)
+        linked.insert(1)
+        linked.insert(0)
+        for i, node in enumerate(linked):
+            self.assertEqual(node.value, i)
+        self.assertListEqual(list(node.value for node in linked), [0, 1, 2])

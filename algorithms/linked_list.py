@@ -12,6 +12,27 @@ class LinkedList:
     def __init__(self, head = None):
         self.head = head
 
+    def __iter__(self):
+        """Make this class iterable implementing the "__next__" method."""
+        self.iter_current = self.head
+        return self
+
+    def __next__(self):
+        """Get next element while iterating. Must raise "StopIteration" after the last element."""
+        if self.iter_current is not None:
+            node = self.iter_current
+            self.iter_current = self.iter_current.next
+            return node
+        else:
+            raise StopIteration
+
+    # def __iter__(self):
+    #     """Make this class iterable using a generator."""
+    #     current = self.head
+    #     while current is not None:
+    #         yield current
+    #         current = current.next
+
     def insert(self, value):
         """Insert a new value to the linked list."""
         self.head = Node(value, self.head)
