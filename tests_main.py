@@ -29,6 +29,7 @@ import tests.test_stack
 import tests.test_queue_of_stacks
 import tests.test_linked_list
 import tests.test_linked_list_midnode
+import tests.test_circular_list
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -53,5 +54,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_stack))
 suite.addTest(loader.loadTestsFromModule(tests.test_queue_of_stacks))
 suite.addTest(loader.loadTestsFromModule(tests.test_linked_list))
 suite.addTest(loader.loadTestsFromModule(tests.test_linked_list_midnode))
+suite.addTest(loader.loadTestsFromModule(tests.test_circular_list))
 
 runner.run(suite)
