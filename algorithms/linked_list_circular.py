@@ -1,4 +1,4 @@
-"""Circular list module."""
+"""Circular linked list module."""
 
 def is_circular(linked_list):
     """Check if the specified Linked List is circular."""

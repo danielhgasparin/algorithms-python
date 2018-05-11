@@ -1,9 +1,9 @@
 import unittest
 from algorithms.linked_list import LinkedList
-from algorithms.circular_list import *
+from algorithms.linked_list_circular import *
 
-class TestCircularList(unittest.TestCase):
-    def test_circular_list(self):
+class TestCircularLinkedList(unittest.TestCase):
+    def test_circular_linked_list(self):
         linked = LinkedList()
         self.assertFalse(is_circular(linked))
         linked.insert(1)
