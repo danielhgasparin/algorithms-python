@@ -31,6 +31,7 @@ import tests.test_linked_list
 import tests.test_linked_list_midnode
 import tests.test_linked_list_circular
 import tests.test_linked_list_from_tail
+import tests.test_tree
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -57,5 +58,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_linked_list))
 suite.addTest(loader.loadTestsFromModule(tests.test_linked_list_midnode))
 suite.addTest(loader.loadTestsFromModule(tests.test_linked_list_circular))
 suite.addTest(loader.loadTestsFromModule(tests.test_linked_list_from_tail))
+suite.addTest(loader.loadTestsFromModule(tests.test_tree))
 
 runner.run(suite)

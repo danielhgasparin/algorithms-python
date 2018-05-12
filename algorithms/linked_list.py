@@ -8,7 +8,7 @@ class Node:
 
 
 class LinkedList:
-    """Linked List."""
+    """Linked List data structure."""
     def __init__(self, head = None):
         self.head = head
 
