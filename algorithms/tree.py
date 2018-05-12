@@ -24,6 +24,7 @@ class Tree:
         self.root = None
 
     def traverse_breadth_first(self, fn):
+        """Traverse the tree breadth first, executing the specified function on each node."""
         queue = deque([self.root])
         while len(queue) > 0:
             node = queue.popleft()
@@ -31,6 +32,7 @@ class Tree:
             queue.extend(node.children)
 
     def traverse_depth_first(self, fn):
+        """Traverse the tree depth first, executing the specified function on each node."""
         queue = deque([self.root])
         while len(queue) > 0:
             node = queue.popleft()
