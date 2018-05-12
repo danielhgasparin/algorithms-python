@@ -24,15 +24,15 @@ class Tree:
         self.root = None
 
     def traverse_breadth_first(self, fn):
-        nodes = deque([self.root])
-        while len(nodes) > 0:
-            node = nodes.popleft()
+        queue = deque([self.root])
+        while len(queue) > 0:
+            node = queue.popleft()
             fn(node)
-            nodes.extend(node.children)
+            queue.extend(node.children)
 
     def traverse_depth_first(self, fn):
-        nodes = deque([self.root])
-        while len(nodes) > 0:
-            node = nodes.popleft()
+        queue = deque([self.root])
+        while len(queue) > 0:
+            node = queue.popleft()
             fn(node)
-            nodes.extendleft(reversed(node.children))
+            queue.extendleft(reversed(node.children))
