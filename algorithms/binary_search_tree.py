@@ -11,6 +11,7 @@ class Node:
         self.left = None
         self.right = None
 
+
     def insert(self, value):
         """Insert a new value to the binary search tree."""
         if value < self.value:
@@ -23,6 +24,7 @@ class Node:
                 self.right = Node(value)
             else:
                 self.right.insert(value)
+
 
     def contains(self, value):
         """Return the node containing the specified value."""
@@ -39,6 +41,7 @@ class Node:
                 return None
             else:
                 return self.right.contains(value)
+
 
     def validate(self, min = None, max = None):
         """Validate if all nodes in the tree follow the rules of a binary search tree."""

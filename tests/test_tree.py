@@ -31,6 +31,7 @@ class TestTree(unittest.TestCase):
         self.assertEqual(tree.root.children[0].children[1].value, "6_6")
         self.assertEqual(tree.root.children[2].children[0].value, "7_7")
 
+
     def test_tree_traverse_depth_first(self):
         
         def make_node_counter():

@@ -6,6 +6,7 @@ class TestVowels(unittest.TestCase):
         self.assertEqual(vowels("A text with vowels."), 5)
         self.assertEqual(vowels("Why?"), 0)
     
+    
     def test_vowels_loop(self):
         self.assertEqual(vowels_loop("A text with vowels."), 5)
         self.assertEqual(vowels_loop("Why"), 0)

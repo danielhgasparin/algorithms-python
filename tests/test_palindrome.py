@@ -11,6 +11,7 @@ class TestPalindrome(unittest.TestCase):
         self.assertFalse(is_palindrome("abab"))
         self.assertFalse(is_palindrome("abcza"))
 
+
     def test_is_palindrome_functional(self):
         self.assertTrue(is_palindrome_functional("a"))
         self.assertTrue(is_palindrome_functional("aa"))

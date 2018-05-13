@@ -12,10 +12,12 @@ class LinkedList:
     def __init__(self, head = None):
         self.head = head
 
+
     def __iter__(self):
         """Make this class iterable implementing the "__next__" method."""
         self.iter_current = self.head
         return self
+
 
     def __next__(self):
         """Get next element while iterating. Must raise "StopIteration" after the last element."""
@@ -26,6 +28,7 @@ class LinkedList:
         else:
             raise StopIteration
 
+
     # def __iter__(self):
     #     """Make this class iterable using a generator."""
     #     current = self.head
@@ -33,9 +36,11 @@ class LinkedList:
     #         yield current
     #         current = current.next
 
+
     def insert(self, value):
         """Insert a new value to the linked list."""
         self.head = Node(value, self.head)
+
 
     def size(self):
         """Get the number of elements in the linked list at the head."""
@@ -46,9 +51,11 @@ class LinkedList:
             current = current.next
         return count
 
+
     def get_head(self):
         """Get the head node."""
         return self.head
+
 
     def get_tail(self):
         """Get the tail node."""
@@ -60,15 +67,18 @@ class LinkedList:
             current = current.next
         return current
 
+
     def clear(self):
         """Empty the linked list."""
         self.head = None
+
 
     def remove_head(self):
         """Remove the head node."""
         if self.head is not None:
             self.head = self.head.next
     
+
     def remove_tail(self):
         """Remove the tail node."""
         if self.head is None:
@@ -85,6 +95,7 @@ class LinkedList:
             current = current.next
         previous.next = None
 
+
     def insert_tail(self, value):
         """Insert a new value to the linked list at the tail."""
         node = Node(value)
@@ -94,6 +105,7 @@ class LinkedList:
         else:
             tail.next = node
         
+
     def get_at(self, index):
         """Get the element at the specified index."""
         count = 0
@@ -104,6 +116,7 @@ class LinkedList:
             current = current.next
             count += 1
         return None
+
 
     def remove_at(self, index):
         """Remove the element at the specified index."""
@@ -118,6 +131,7 @@ class LinkedList:
             return
 
         previous.next = previous.next.next
+
 
     def insert_at(self, index, value):
         """Insert a new value to the linked list at the specified index."""

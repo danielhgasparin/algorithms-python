@@ -16,6 +16,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(root.right.value, 20)
         self.assertEqual(root.right.left.value, 11)
 
+
     def test_binary_search_tree_contains(self):
         root = Node(10)
         root.insert(1)
@@ -28,6 +29,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(root.contains(11).value, 11)
         self.assertEqual(root.contains(-2), None)
         self.assertEqual(root.contains(12), None)
+
 
     def test_binary_search_tree_validade(self):
         root = Node(10)

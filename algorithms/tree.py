@@ -8,9 +8,11 @@ class Node:
         self.value = value
         self.children = []
 
+
     def add(self, value):
         """Add a child with the specified value to this node."""
         self.children.append(Node(value))
+
 
     def remove(self, value):
         """Remove any child having the specified value from this node."""
@@ -23,6 +25,7 @@ class Tree:
     def __init__(self):
         self.root = None
 
+
     def traverse_breadth_first(self, fn):
         """Traverse the tree breadth first, executing the specified function on each node."""
         queue = deque([self.root])
@@ -30,6 +33,7 @@ class Tree:
             node = queue.popleft()
             fn(node)
             queue.extend(node.children)
+
 
     def traverse_depth_first(self, fn):
         """Traverse the tree depth first, executing the specified function on each node."""

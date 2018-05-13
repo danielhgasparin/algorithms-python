@@ -35,6 +35,7 @@ import tests.test_tree
 import tests.test_tree_level_width
 import tests.test_binary_search_tree
 import tests.test_event_handler
+import tests.test_sort
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -65,5 +66,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_tree))
 suite.addTest(loader.loadTestsFromModule(tests.test_tree_level_width))
 suite.addTest(loader.loadTestsFromModule(tests.test_binary_search_tree))
 suite.addTest(loader.loadTestsFromModule(tests.test_event_handler))
+suite.addTest(loader.loadTestsFromModule(tests.test_sort))
 
 runner.run(suite)

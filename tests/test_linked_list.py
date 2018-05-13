@@ -23,11 +23,13 @@ class TestLinkedList(unittest.TestCase):
         linked.clear()
         self.assertEqual(linked.size(), 0)
 
+
     def test_linked_list_insert(self):
         linked = LinkedList()
         linked.insert(1)
         linked.insert(2)
         linked.insert(3)
+
 
     def test_linked_list_size(self):
         linked = LinkedList()
@@ -37,6 +39,7 @@ class TestLinkedList(unittest.TestCase):
         linked.insert(3)
         self.assertEqual(linked.size(), 3)
 
+
     def test_linked_list_get_head(self):
         linked = LinkedList()
         self.assertEqual(linked.get_head(), None)
@@ -44,6 +47,7 @@ class TestLinkedList(unittest.TestCase):
         linked.insert(2)
         linked.insert(3)
         self.assertEqual(linked.get_head().value, 3)
+
 
     def test_linked_list_get_tail(self):
         linked = LinkedList()
@@ -53,6 +57,7 @@ class TestLinkedList(unittest.TestCase):
         linked.insert(3)
         self.assertEqual(linked.get_tail().value, 1)
 
+
     def test_linked_list_clear(self):
         linked = LinkedList()
         linked.clear()
@@ -61,6 +66,7 @@ class TestLinkedList(unittest.TestCase):
         linked.insert(3)
         linked.clear()
         self.assertEqual(linked.size(), 0)
+
 
     def test_linked_list_remove_head(self):
         linked = LinkedList()
@@ -77,6 +83,7 @@ class TestLinkedList(unittest.TestCase):
         linked.remove_head()
         self.assertEqual(linked.get_head().value, 3)
 
+
     def test_linked_list_remove_tail(self):
         linked = LinkedList()
         linked.remove_tail()
@@ -92,6 +99,7 @@ class TestLinkedList(unittest.TestCase):
         linked.remove_tail()
         self.assertEqual(linked.get_tail().value, 3)
 
+
     def test_linked_list_insert_tail(self):
         linked = LinkedList()
         linked.insert_tail(1)
@@ -102,6 +110,7 @@ class TestLinkedList(unittest.TestCase):
         linked.insert_tail(3)
         self.assertEqual(linked.get_tail().value, 3)
 
+
     def test_linked_list_get_at(self):
         linked = LinkedList()
         self.assertEqual(linked.get_at(0), None)
@@ -111,6 +120,7 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(linked.get_at(0).value, 3)
         self.assertEqual(linked.get_at(2).value, 1)
         self.assertEqual(linked.get_at(10), None)
+
 
     def test_linked_list_remove_at(self):
         linked = LinkedList()
@@ -129,6 +139,7 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(linked.get_at(0).value, 3)
         linked.remove_at(10)
         self.assertEqual(linked.get_at(0).value, 3)
+
 
     def test_linked_list_insert_at(self):
         linked = LinkedList()
@@ -150,6 +161,7 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(linked.get_at(5).value, 6)
         linked.insert_at(0, 7)
         self.assertEqual(linked.get_at(0).value, 7)
+
 
     def test_linked_list_iteration(self):
         linked = LinkedList()

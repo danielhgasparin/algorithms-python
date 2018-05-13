@@ -7,10 +7,12 @@ class TestPyramidSteps(unittest.TestCase):
         self.assertListEqual(pyramid_steps_concat(2), [" # ", "###"])
         self.assertListEqual(pyramid_steps_concat(3), ["  #  ", " ### ", "#####"])
 
+
     def test_pyramid_steps_loop(self):
         self.assertListEqual(pyramid_steps_loop(1), ["#"])
         self.assertListEqual(pyramid_steps_loop(2), [" # ", "###"])
         self.assertListEqual(pyramid_steps_loop(3), ["  #  ", " ### ", "#####"])
+
 
     def test_pyramid_steps_recursive(self):
         self.assertListEqual(pyramid_steps_recursive(1), ["#"])

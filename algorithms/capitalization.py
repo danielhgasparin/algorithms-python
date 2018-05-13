@@ -9,6 +9,7 @@ def title_case(value):
     """Return the specified string in title case."""
     return " ".join(word[0].upper() + word[1:] for word in value.split())
 
+
 def title_case_loop(value):
     """Return the specified string in title case using a loop."""
     result = ""
