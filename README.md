@@ -1,3 +1,3 @@
-# algorithms-study
+# algorithms-python
 
-Studying algorithms with python.
+Algorithms and data structures with python. 
