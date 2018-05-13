@@ -34,6 +34,7 @@ import tests.test_linked_list_from_tail
 import tests.test_tree
 import tests.test_tree_level_width
 import tests.test_binary_search_tree
+import tests.test_event_handler
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
@@ -63,5 +64,6 @@ suite.addTest(loader.loadTestsFromModule(tests.test_linked_list_from_tail))
 suite.addTest(loader.loadTestsFromModule(tests.test_tree))
 suite.addTest(loader.loadTestsFromModule(tests.test_tree_level_width))
 suite.addTest(loader.loadTestsFromModule(tests.test_binary_search_tree))
+suite.addTest(loader.loadTestsFromModule(tests.test_event_handler))
 
 runner.run(suite)
