@@ -39,3 +39,16 @@ class Node:
                 return None
             else:
                 return self.right.contains(value)
+
+    def validate(self, min = None, max = None):
+        """Validate if all nodes in the tree follow the rules of a binary search tree."""
+        if (min is not None and self.value < min) or (max is not None and self.value > max):
+            return False
+
+        if self.left is not None and not self.left.validate(min, self.value):
+            return False
+
+        if self.right is not None and not self.right.validate(self.value, max):
+            return False
+
+        return True
